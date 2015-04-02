@@ -24,6 +24,12 @@ namespace CodeChallenge.Api.Client.HttpClient
         
         }
 
+        public async Task<IHttpResponse<T>> Get<T>(string resource)
+        {
+            HttpResponseMessage message = await GetAsync(BuildUrl(resource)).ConfigureAwait(false);
+            return new HttpResponse<T>(message);
+        }
+
         private string BuildUrl(string resource)
         {
             if (resource == null)
