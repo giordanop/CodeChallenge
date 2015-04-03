@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Runtime.Caching;
-using System.Web.Http;
 using System.Web.Http.Results;
-using System.Web.Mvc;
 using CodeChallenge.Api.Client.Object;
-using CodeChallenge.Web;
 using CodeChallenge.Web.Controllers;
 using NUnit.Framework;
 
@@ -85,5 +82,4 @@ namespace CodeChallenge.Web.Tests.Controllers
         }
     }
 }
-
 

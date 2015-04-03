@@ -13,6 +13,7 @@ namespace CodeChallenge.Web.Controllers
 {
     public class MatchController : ApiController
     {
+        [HttpPost]
         public IHttpActionResult Post([FromBody] string[] value)
         {
             string beaconNameCache = ConfigurationManager.AppSettings["BeaconNameCache"];
