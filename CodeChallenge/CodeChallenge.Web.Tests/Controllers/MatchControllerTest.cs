@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.Caching;
 using System.Web.Http;
@@ -16,8 +17,10 @@ namespace CodeChallenge.Web.Tests.Controllers
     public class MatchControllerTest
     {
         [Test]
-        public async void Post()
+        public void Post()
         {
+            var beaconNameCache = ConfigurationManager.AppSettings["BeaconNameCache"];
+
             // Arrange
             MatchController controller = new MatchController();
 
@@ -50,7 +53,7 @@ namespace CodeChallenge.Web.Tests.Controllers
                 }
             };
 
-            MemoryCache.Default.Set("BeaconsFeed",beaconResponse,DateTimeOffset.MaxValue);
+            MemoryCache.Default.Set(beaconNameCache,beaconResponse,DateTimeOffset.MaxValue);
 
             // Act
             var  result = controller.Post(new[]

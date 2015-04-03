@@ -20,11 +20,12 @@ namespace CodeChallenge.Web.Job
 	{
 		private readonly object _lock = new object();
 		private bool _shuttingDown;
+        private readonly string beaconNameCache;
 		public TaskBeacon()
         {
             // Register this task with the hosting environment. Allows for a more graceful stop of the task, in the case of IIS shutting down.
 			HostingEnvironment.RegisterObject(this);
-
+            beaconNameCache = ConfigurationManager.AppSettings["BeaconNameCache"];
         }
 
         public void Execute()
@@ -40,7 +41,7 @@ namespace CodeChallenge.Web.Job
 			    ICodeChallengeClient client = new CodeChallengeClientFactory().Create(ConfigurationManager.AppSettings["Api"]);
 			    var result= client.BeaconResource.GetBeaconsFeed().Result.Data.Result;
 			    result.LastUpdate = DateTime.Now;
-			    MemoryCache.Default.Set("BeaconsFeed",result,DateTimeOffset.MaxValue);
+			    MemoryCache.Default.Set(beaconNameCache,result,DateTimeOffset.MaxValue);
 			}
 		}
 
