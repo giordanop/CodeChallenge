@@ -17,14 +17,15 @@ namespace CodeChallenge.Web
     {
         protected void Application_Start()
         {
+            TaskManager.UnobservedTaskException += TaskManager_UnobservedTaskException;
+            TaskManager.Initialize(new SchedulerBeacon()); 
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            TaskManager.UnobservedTaskException += TaskManager_UnobservedTaskException;
-            TaskManager.Initialize(new SchedulerBeacon()); 
         }
 
         protected void Application_End(object sender, EventArgs e)
