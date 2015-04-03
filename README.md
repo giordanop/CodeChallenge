@@ -8,6 +8,6 @@ Challenge Write a backend solution that:
 
 Additional requirements The proposed solution should: 
 
- consider a rollback mechanism for the list of active iBeacons 
+- consider a rollback mechanism for the list of active iBeacons 
 
- be implemented using Microsoft technologies
+- be implemented using Microsoft technologies
