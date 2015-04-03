@@ -7,13 +7,17 @@ using System.Net.Http;
 using System.Runtime.Caching;
 using System.Web.Http;
 using System.Web.Http.Results;
+using System.Web.Mvc;
+using System.Web.UI;
 using CodeChallenge.Api.Client.Object;
 
 namespace CodeChallenge.Web.Controllers
 {
     public class MatchController : ApiController
     {
-        [HttpPost]
+        [System.Web.Http.HttpPost]
+        [OutputCache(Duration = 0, VaryByParam = "none", Location = OutputCacheLocation.Any)]
+    
         public IHttpActionResult Post([FromBody] string[] value)
         {
             string beaconNameCache = ConfigurationManager.AppSettings["BeaconNameCache"];
