@@ -1,6 +1,6 @@
 # CodeChallenge
 
-Challenge Write a backend solution that: 
+Write a backend solution that: 
 
 1. Retrieves a list of active iBeacons on a repeated interval from 
 
