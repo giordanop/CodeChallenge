@@ -39,9 +39,7 @@ namespace CodeChallenge.Client
             client.BaseAddress = new Uri("http://localhost:1745/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            Console.WriteLine("Press enter to start");
             
-            Console.Read();
 
             while (true)
             {
@@ -61,7 +59,7 @@ namespace CodeChallenge.Client
         {
             var beaconToSend = beaconUUIDs.Shuffle().Take(new Random().Next(0, 10)).ToArray();
             Console.WriteLine();
-            Console.WriteLine("Beacon(s) sent:");
+            Console.WriteLine("Beacon(s) to send:");
             if (beaconToSend.Length == 0)
             {
                 Console.WriteLine("None");
@@ -70,6 +68,11 @@ namespace CodeChallenge.Client
             {
                 Console.WriteLine("UUID: {0}", c);
             }
+
+            Console.WriteLine("Press enter to send");
+
+            Console.Read();
+            Console.Read();
 
             HttpContent content = new ObjectContent(typeof (string[]), beaconToSend, new JsonMediaTypeFormatter());
 
