@@ -39,6 +39,9 @@ namespace CodeChallenge.Client
             client.BaseAddress = new Uri("http://localhost:1745/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+            Console.WriteLine("Press enter to start");
+            
+            Console.Read();
 
             while (true)
             {
