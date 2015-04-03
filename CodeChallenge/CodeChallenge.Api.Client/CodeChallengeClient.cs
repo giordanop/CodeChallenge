@@ -8,7 +8,6 @@ namespace CodeChallenge.Api.Client
     public class CodeChallengeClient : ICodeChallengeClient
     {
         private readonly ReadOnlyCollection<ICodeChallengeHttpClient> DisposableObjects;
-        private readonly ICodeChallengeHttpClient HttpClientForItem;
         private BeaconResource BeaconInternal;
         public CodeChallengeHttpClient HttpClientForApi { get; set; }
 
