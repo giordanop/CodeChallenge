@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.Api.Client", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.Api.Client.Tests", "CodeChallenge.Api.Client.Tests\CodeChallenge.Api.Client.Tests.csproj", "{F97D63C8-83D5-4803-81D9-6472CC933F7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.Web", "CodeChallenge.Web\CodeChallenge.Web.csproj", "{1540F52D-F748-4012-84DF-1D7D77BE735D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.Web.Tests", "CodeChallenge.Web.Tests\CodeChallenge.Web.Tests.csproj", "{766E6EF6-F54A-4B49-975C-23C9FEE42AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F97D63C8-83D5-4803-81D9-6472CC933F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F97D63C8-83D5-4803-81D9-6472CC933F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F97D63C8-83D5-4803-81D9-6472CC933F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1540F52D-F748-4012-84DF-1D7D77BE735D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1540F52D-F748-4012-84DF-1D7D77BE735D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1540F52D-F748-4012-84DF-1D7D77BE735D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1540F52D-F748-4012-84DF-1D7D77BE735D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766E6EF6-F54A-4B49-975C-23C9FEE42AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766E6EF6-F54A-4B49-975C-23C9FEE42AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766E6EF6-F54A-4B49-975C-23C9FEE42AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766E6EF6-F54A-4B49-975C-23C9FEE42AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

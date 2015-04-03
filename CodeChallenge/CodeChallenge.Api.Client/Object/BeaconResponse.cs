@@ -10,5 +10,6 @@ namespace CodeChallenge.Api.Client.Object
     {
         public DateTime Created { get; set; }
         public List<Beacon> IBeacons { get; set; }
+        public DateTime? LastUpdate { get; set; }
     }
 }
